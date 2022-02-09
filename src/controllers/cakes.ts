@@ -40,6 +40,6 @@ export module CakesController {
 
   export const deleteCakeEndpoint = async (req: Request, res: Response, next: (err: any) => void) => {
     await CakesStore.deleteCake(req.params.cakeId);
-    res.status(200);
+    res.status(200).json();
   }
 }
