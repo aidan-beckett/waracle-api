@@ -1,4 +1,4 @@
-import { CreateCakeRequest, UpdateCakeRequest } from "../../models/cakes"
+import { CreateCakeRequest, UpdateCakeRequest} from "shared/types/cakes";
 import { isString, isNumber } from "util";
 import { HttpError } from "../../errors/httpError";
 
@@ -18,6 +18,8 @@ export module CakeValidator {
 
     if(!body.yumFactor) errorMessages.push("A Cake must have a Yum Factor");
     else if(!isNumber(body.yumFactor)) errorMessages.push("Yum Factor must be a number");
+    else if(body.yumFactor < 1 || body.yumFactor > 5) errorMessages.push("Yum Factor must be between 1 and 5");
+    
     if(errorMessages.length > 0) throw HttpError(400, errorMessages);
   }
 
@@ -27,8 +29,10 @@ export module CakeValidator {
     if(body.name && !isString(body.name)) errorMessages.push("Name must be a string");
     if(body.comment && !isString(body.comment)) errorMessages.push("Comment must be a string");
     if(body.imageUrl && !isString(body.imageUrl)) errorMessages.push("Image Url must be a string");
+
     if(body.yumFactor && !isNumber(body.yumFactor)) errorMessages.push("Yum Factor must be a number");
-    
+    else if(body.yumFactor && (body.yumFactor < 1 || body.yumFactor > 5)) errorMessages.push("Yum Factor must be between 1 and 5");
+
     if(errorMessages.length > 0) throw HttpError(400, errorMessages);
   }
 }

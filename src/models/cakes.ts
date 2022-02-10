@@ -1,22 +1,6 @@
 import Storage from "node-persist";
 import { HttpError } from "../errors/httpError";
-
-export type CreateCakeRequest = {
-  name: string,
-  comment: string,
-  imageUrl: string,
-  yumFactor: number 
-}
-
-export type UpdateCakeRequest = Partial<CreateCakeRequest>
-
-export type CakeResponse = {
-  id: number,
-  name: string,
-  comment: string,
-  imageUrl: string,
-  yumFactor: number
-}
+import {CakeResponse, CreateCakeRequest, UpdateCakeRequest} from "shared/types/cakes";
 
 export module CakesStore {
 

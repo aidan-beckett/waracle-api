@@ -12,6 +12,7 @@
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.16",
     "@types/node-persist": "^3.1.2",
+    "shared": "../shared",
     "typescript": "^4.5.5"
   },
   "dependencies": {
