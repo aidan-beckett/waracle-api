@@ -26,7 +26,9 @@ export module CakesStore {
 
   export const createCake = async (data: CreateCakeRequest) => {
     await __initStorage();
-    let cakeKey = (await Storage.length() + 1);
+    let keys = await Storage.keys();
+    let cakeKey = keys.length > 0 ? parseInt(keys[keys.length-1]) + 1 : 1;
+    console.log(cakeKey);
     let storageResult = await Storage.set(`${cakeKey}`, {id: cakeKey, ...data});
     return storageResult.content.value;
   }

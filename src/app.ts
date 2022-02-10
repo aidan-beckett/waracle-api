@@ -8,6 +8,17 @@ const port = 8000;
 
 app.use(BodyParser.json());
 
+app.use((req: Express.Request, res: Express.Response, next) => {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PATCH, DELETE');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+
 app.listen(port, () => {
   console.log(`App Started on ${port}`);
 });
