@@ -23,6 +23,11 @@ app.listen(port, () => {
   console.log(`App Started on ${port}`);
 });
 
+app.use("/", 
+  (req: express.Request,
+  res: express.Response) => {
+    res.status(200);
+})
 app.use("/api", CakesRouter);
 
 app.use((err: any,
