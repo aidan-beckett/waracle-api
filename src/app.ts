@@ -27,8 +27,9 @@ app.use("/",
   (req: express.Request,
   res: express.Response) => {
     res.status(200);
-})
-app.use("/api", CakesRouter);
+});
+
+app.use("/api/cakes", CakesRouter);
 
 app.use((err: any,
   req: express.Request,
