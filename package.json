@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node --trace-warnings ./build/app.js"
+    "start": "tsc && node --trace-warnings ./build/app.js",
+    "build": "tsc"
   },
   "author": "Aidan Beckett",
   "license": "ISC",
