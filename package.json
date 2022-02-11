@@ -12,13 +12,13 @@
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.16",
     "@types/node-persist": "^3.1.2",
-    "shared": "../shared",
     "typescript": "^4.5.5"
   },
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
-    "node-persist": "^3.1.0"
+    "node-persist": "^3.1.0",
+    "shared": "https://github.com/aidan-beckett/waracle-shared#master"
   }
 }
