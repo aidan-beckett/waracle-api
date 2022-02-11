@@ -5,7 +5,7 @@ RUN npm install pm2 -g
 
 #Copy UI content and Nginx configuration
 COPY build /var/www
-
+COPY node_modules /var/www
 #Expose HTTP
 EXPOSE 80
 
