@@ -1,6 +1,6 @@
 [
   {
     "name": "test-api-container",
-    "imageUri": "887716738199.dkr.ecr.eu-west-2.amazonaws.com/tech-test-api:prod"
+    "imageUri": "887716738199.dkr.ecr.eu-west-2.amazonaws.com/tech-tests-api:prod"
   }
 ]
