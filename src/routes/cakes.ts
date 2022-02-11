@@ -4,13 +4,13 @@ import { CakesController }  from "../controllers/cakes";
 
 const CakesRouter = Router();
 
-CakesRouter.get(`/`, CakesController.getCakesEndpoint);
+CakesRouter.get(`/cakes`, CakesController.getCakesEndpoint);
 
-CakesRouter.post(`/`, CakesController.createCakeEndpoint);
+CakesRouter.post(`/cakes`, CakesController.createCakeEndpoint);
 
-CakesRouter.get(`/:cakeId`, CakesController.getCakeEndpoint);
+CakesRouter.get(`/cakes/:cakeId`, CakesController.getCakeEndpoint);
 
-CakesRouter.patch(`/:cakeId`, CakesController.updateCakeEndpoint);
+CakesRouter.patch(`/cakes/:cakeId`, CakesController.updateCakeEndpoint);
 
-CakesRouter.delete(`/:cakeId`, CakesController.deleteCakeEndpoint);
+CakesRouter.delete(`/cakes/:cakeId`, CakesController.deleteCakeEndpoint);
 export default CakesRouter;
