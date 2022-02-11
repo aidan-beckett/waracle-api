@@ -10,4 +10,4 @@ EXPOSE 80
 
 WORKDIR /var/www
 #Create Nginx process
-CMD ["/bin/sh", "-c", "runtime-env-cra && nginx -g \"daemon off;\""]
+CMD ["/bin/sh", "-c", "nginx -g \"daemon off;\""]
