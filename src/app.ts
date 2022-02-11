@@ -4,7 +4,7 @@ import CakesRouter from "./routes/cakes";
 require("express-async-errors");
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.use(bodyParser.json());
 
