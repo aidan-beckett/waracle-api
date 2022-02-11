@@ -10,5 +10,6 @@ COPY build /var/www
 EXPOSE 80
 
 WORKDIR /var/www
+RUN ls
 #Create Nginx process
 CMD ["pm2-runtime", "app.js"]
